@@ -94,7 +94,6 @@
       var nav = document.querySelector("nav");
       let is_opened = false;
       window.addEventListener("scroll", function () {
-        console.log(window.pageYOffset);
         if (window.pageYOffset > 50) {
           nav.classList.add("bg-dark", "shadow");
         } else if (is_opened == false) {
@@ -107,12 +106,10 @@
         if (is_opened == false) {
           nav.classList.add("bg-dark", "shadow");
           is_opened = true;
-          console.log(is_opened);
         } else if (window.pageYOffset < 100) {
           setTimeout(function () {
             nav.classList.remove("bg-dark", "shadow");
             is_opened = false;
-            console.log(is_opened);
           }, 125);
         }
       }
