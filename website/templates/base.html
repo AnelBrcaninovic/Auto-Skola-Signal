@@ -185,6 +185,17 @@
 
       const p = document.getElementsByClassName("fade_from_left_to_right");
 
+      addEventListener("load", async function () {
+        for (let i = 0; i < p.length; i++) {
+          console.log(getOffset(p[0]).top);
+          if (getOffset(p[i]).top < 680) {
+            await delay(50);
+            p[i].classList.remove("transform");
+            p[i].classList.add("to_animate");
+          }
+        }
+      });
+
       addEventListener("scroll", async function () {
         for (let i = 0; i < p.length; i++) {
           console.log(getOffset(p[0]).top);
