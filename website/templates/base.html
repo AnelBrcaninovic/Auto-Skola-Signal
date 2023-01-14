@@ -11,6 +11,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auto skola Signal</title>
+    <!--Css za animaciju fade_in_from_left_to_right-->
+    <style>
+      .transform {
+        transform: translateX(-200%);
+        color: red;
+      }
+      .to_animate {
+        animation-name: fadeparagraf;
+        animation-duration: 2s;
+      }
+      @keyframes fadeparagraf {
+        0% {
+          transform: translateX(-150%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+    </style>
     <style>
       .banner-image {
         background-size: cover;
@@ -29,6 +48,7 @@
     />
   </head>
   <body>
+    <!--Navbar-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
       <div class="container-fluid">
         <a href="/">
@@ -76,30 +96,13 @@
         </div>
       </div>
     </nav>
+    <!--O nama-->
     <div
       class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
     >
       <div class="container translate">
         <div id="translate" class="content text-center">
           <h1 class="text-white">Dobrodosli u auto školu!</h1>
-          <style>
-            .transform {
-              transform: translateX(-200%);
-              color: red;
-            }
-            .to_animate {
-              animation-name: fadeparagraf;
-              animation-duration: 2s;
-            }
-            @keyframes fadeparagraf {
-              0% {
-                transform: translateX(-150%);
-              }
-              100% {
-                transform: translateX(0%);
-              }
-            }
-          </style>
 
           <p class="text-grey fs-5 mb-3">
             Autoškola je online sustav koji vam pomaže da lakše pripremite svoje
@@ -149,6 +152,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <!--Border fade animacija-->
+
     <script>
       var nav = document.querySelector("nav");
       let is_opened = false;
@@ -179,6 +184,7 @@
       });
     </script>
 
+    <!--Fade in Animacija sa lijeve strane u desnu-->
     <script type="text/javascript">
       function delay(milliseconds) {
         return new Promise((resolve) => {
