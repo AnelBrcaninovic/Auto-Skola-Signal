@@ -4,4 +4,4 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def homepage():
-    return render_template('autoskola.html')
+    return render_template('homepage.html')
