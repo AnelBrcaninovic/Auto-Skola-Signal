@@ -3,7 +3,7 @@ block head %}<link
   rel="stylesheet"
   href="{{ url_for('static', filename = 'css/signupedit.css') }}"
 />
-{% endblock %} {% block content %}
+{% endblock %} {% block header %}
 <form action="" method="post">
   <div class="signUp">
     <label class="form-label" for="firstname">Unesite ime: </label>
@@ -42,5 +42,11 @@ block head %}<link
     <button class="btn btn-primary">Registracija</button>
   </div>
 </form>
+
+{% endblock %} {% block scripts %}
+
+<script type="text/javascript">
+  document.getElementById("forma").style.display = "none";
+</script>
 
 {% endblock %}
