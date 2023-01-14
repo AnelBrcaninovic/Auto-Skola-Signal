@@ -35,6 +35,25 @@
         }
       }
     </style>
+    <!--Css za animaciju fade_in-->
+    <style>
+      .opacity {
+        opacity: 1;
+      }
+      .fade_in {
+        animation-name: fadeIN;
+        animation-duration: 2s;
+      }
+      @keyframes fadeIN {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
     <style>
       .banner-image {
         background-size: cover;
@@ -158,14 +177,20 @@
     </h1>
     <div class="container dark px-4 text-center">
       <div class="row gx-5">
-        <div class="col">
+        <div class="col opacity fade_in">
           <div class="p-3">Custom column padding</div>
         </div>
-        <div class="col">
+        <div class="col opacity fade_in">
           <div class="p-3">Custom column padding</div>
         </div>
-        <div class="col">
-          <div class="p-3">Custom column padding</div>
+        <div class="col opacity fade_in">
+          <div class="p-3">
+            Custom column paddingCustom column paddingCustom column
+            paddingCustom column paddingCustom column paddingCustom column
+            paddingCustom column paddingCustom column paddingCustom column
+            paddingCustom column paddingCustom column paddingCustom column
+            padding
+          </div>
         </div>
       </div>
     </div>
@@ -381,6 +406,47 @@
             await delay(50);
             p[i].classList.remove("transform");
             p[i].classList.add("to_animate");
+          }
+        }
+      });
+    </script>
+
+    <!--Animacija za Kartice-->
+    <script type="text/javascript">
+      const card = document.getElementsByClassName("fade_in");
+
+      function delay(milliseconds) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, milliseconds);
+        });
+      }
+
+      function getOffset(el) {
+        const rect = el.getBoundingClientRect();
+        return {
+          left: rect.left + window.scrollX,
+          top: rect.top,
+        };
+      }
+
+      addEventListener("load", async function () {
+        for (let i = 0; i < card.length; i++) {
+          console.log(getOffset(card[0]).top);
+          if (getOffset(card[i]).top < 680) {
+            await delay(50);
+            p[i].classList.remove("opacity");
+            p[i].classList.add("fade_animation");
+          }
+        }
+      });
+
+      addEventListener("scroll", async function () {
+        for (let i = 0; i < p.length; i++) {
+          console.log(getOffset(p[0]).top);
+          if (getOffset(p[i]).top < 680) {
+            await delay(50);
+            p[i].classList.remove("opacity");
+            p[i].classList.add("fade_animation");
           }
         }
       });
