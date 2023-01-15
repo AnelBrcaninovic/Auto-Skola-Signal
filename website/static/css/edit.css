@@ -1,5 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+main{
+  margin-bottom: 220px;
 }
 
 .navbar {
