@@ -103,4 +103,19 @@ addEventListener("load", async function () {
 
 // Counter Animation //
 
-const headers = [];
+function animateValue(id) {
+  var obj = document.getElementById(id);
+  var current = parseInt(obj.innerHTML);
+  setInterval(function () {
+    if (current <= 1500) {
+      current++;
+      // Update the contents of the element
+      obj.innerHTML = current;
+      current++;
+      obj.innerHTML = current;
+      current++;
+    }
+  }, 0.3);
+}
+
+animateValue("cout_up");
