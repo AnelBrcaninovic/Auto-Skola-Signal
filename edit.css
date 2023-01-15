@@ -156,3 +156,6 @@ footer .form-control {
 .list-1:hover {
   color: #93cbfb;
 }
+div {
+  border: #93cbfb solid 1px;
+}
