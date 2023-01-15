@@ -138,14 +138,11 @@
       id="top"
     >
       <div class="container translate">
+        {% block content %}
         <div id="translate" class="content text-center">
-<<<<<<< HEAD
           <h1 class="text-white">Dobrodosli u auto školu Signal!</h1>
-=======
-          {% block content %}
 
           <h1 class="text-white">Dobrodosli u auto školu!</h1>
->>>>>>> 59348c2b6583cbcdd05ac17a63743e7490126623
 
           <p class="text-grey fs-5 mb-3">
             Autoškola je online sustav koji vam pomaže da lakše pripremite svoje
@@ -161,12 +158,8 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    {% endblock %} {% block onama %}
-=======
     {% block onama %}
 
->>>>>>> 59348c2b6583cbcdd05ac17a63743e7490126623
     <div class="container my-5">
       <h1
         class="text-center mb-5 fade_from_left_to_right transform"
@@ -221,10 +214,13 @@
       </div>
     </div>
 
+    {% endblock %}
     <!--Footer-->
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="">
       <!-- Footer -->
+      {% block footer %}
+
       <footer
         class="text-center text-lg-start text-white"
         style="background-color: #1c2331"
