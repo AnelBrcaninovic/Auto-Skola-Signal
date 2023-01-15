@@ -303,54 +303,21 @@
             </div>
             <div class="col-md-2">
               <h5 class="text-md-right">Kontakt</h5>
+              <a
+                href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCKCGljWCXFlLsBQjWNLWGdcfJGjKVsDmMKnHhtfWTvSQxFGLwPbNnTfZRQmFJWXCXtdrJhL"
+                >mail.autoskolasignal@gmail.com</a
+              >
               <hr />
             </div>
-            <div class="col-md-5">
-              <form method="POST" target="votar">
-                <fieldset class="form-group mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="clear"
-                    name="email"
-                    placeholder="Unesite email"
-                  />
-                </fieldset>
-                <fieldset class="form-group">
-                  <textarea
-                    class="form-control mb-3"
-                    id="clear"
-                    placeholder="Pitajte nas: "
-                    name="message"
-                  ></textarea>
-                </fieldset>
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %} {% for category,message in messages %} {% if
-                category=='error' %}
-                <label style="color: red" for="flash" class="form-label"
-                  >{{message}}</label
-                >
-                {% else %}
-                <label for="flash" class="form-label">{{message}}</label>
-
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
-
-                <fieldset class="form-group text-xs-right">
-                  <button
-                    type="submit"
-                    onclick="clearform(document.querySelectorAll('#clear'))"
-                    class="btn btn-primary mb-2"
-                  >
-                    Posalji
-                  </button>
-                </fieldset>
-              </form>
-            </div>
+            <div class="col-md-5"></div>
+            <center>&copy; All Rights Reserved, Auto škola "Signal"</center>
           </div>
         </div>
       </footer>
+
       <!-- Footer -->
     </div>
+
     <!-- End of .container -->
 
     <script
