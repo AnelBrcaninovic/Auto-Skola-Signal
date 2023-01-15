@@ -7,7 +7,7 @@ def homepage():
     return render_template('base.html')
 
 
-@views.route('/')
-def homepage():
-    return render_template('base.html')
+@views.route('/kontakt',methods=['GET', 'POST'])
+def kontakt():
+    return render_template('contact.html')
 
