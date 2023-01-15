@@ -10,8 +10,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %} Auto skola Signal {% endblock %}</title>
-    {% block head %} {% endblock %}
+    <title>Auto skola Signal</title>
     <style>
       .banner-image {
         background-size: cover;
@@ -80,11 +79,12 @@
     <div
       class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
     >
-      <div class="container">
+      <div class="container translate">
         <div id="translate" class="content text-center">
           <h1 class="text-white">Dobrodosli u auto školu!</h1>
           <style>
-            .red {
+            .transform {
+              transform: translateX(200%);
               color: red;
             }
             .to_animate {
@@ -115,12 +115,17 @@
       </div>
     </div>
     <div class="container my-5">
+      <<<<<<< HEAD
       <h1 class="text-center mb-5">O NAMA</h1>
-      <p class="text-about fs-5 mb-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
-        soluta, ipsa molestiae voluptate sit ab voluptatem assumenda voluptatum,
-        quod atque obcaecati iure. Nihil iusto vero quos ad! Quidem beatae
-        provident consectetur, esse ratione delectus iure aliquid facilis?<br />
+      <p class="text-about fs-5 mb-3">=======</p>
+
+      <h1 class="text-center mb-5 fade_from_left_to_right transform">O NAMA</h1>
+      <p class="text-about fs-5 mb-3 fade_from_left_to_right transform">
+        >>>>>>> 417b3470d43d169735770811482e108c8f4a9c56 Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Tempora, soluta, ipsa molestiae
+        voluptate sit ab voluptatem assumenda voluptatum, quod atque obcaecati
+        iure. Nihil iusto vero quos ad! Quidem beatae provident consectetur,
+        esse ratione delectus iure aliquid facilis?<br />
         Autem expedita eum suscipit cumque illo voluptatem facilis placeat
         voluptate tempora dolores delectus quas, optio distinctio, perspiciatis
         exercitationem velit atque corrupti.<br />
@@ -168,6 +173,33 @@
       });
     </script>
 
-    {% block scripts %} {% endblock %}
+    <script type="text/javascript">
+      function delay(milliseconds) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, milliseconds);
+        });
+      }
+
+      function getOffset(el) {
+        const rect = el.getBoundingClientRect();
+        return {
+          left: rect.left + window.scrollX,
+          top: rect.top,
+        };
+      }
+
+      const p = document.getElementsByClassName("fade_from_left_to_right");
+
+      addEventListener("scroll", async function () {
+        for (let i = 0; i < p.length; i++) {
+          console.log(getOffset(p[0]).top);
+          if (getOffset(p[i]).top < 680) {
+            await delay(50);
+            p[i].classList.remove("transform");
+            p[i].classList.add("to_animate");
+          }
+        }
+      });
+    </script>
   </body>
 </html>
