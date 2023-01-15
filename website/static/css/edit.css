@@ -78,3 +78,8 @@ main{
 .btn {
   padding: 10px;
 }
+
+.text-about {
+  margin: auto;
+  text-align: center;
+}
