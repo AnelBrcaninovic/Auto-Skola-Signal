@@ -47,7 +47,6 @@ const p = document.getElementsByClassName("fade_from_left_to_right");
 //  Animation for fade_in_from_left_to_right //
 addEventListener("load", async function () {
   for (let i = 0; i < p.length; i++) {
-    console.log(getOffset(p[0]).top);
     if (getOffset(p[i]).top < 680) {
       await delay(50);
       p[i].classList.remove("transform");
@@ -103,19 +102,59 @@ addEventListener("load", async function () {
 
 // Counter Animation //
 
-function animateValue(id) {
+function animateProlaznike(id) {
   var obj = document.getElementById(id);
   var current = parseInt(obj.innerHTML);
+
   setInterval(function () {
-    if (current <= 1500) {
-      current++;
+    if (current <= 5000) {
+      current += 7;
       // Update the contents of the element
-      obj.innerHTML = current;
-      current++;
-      obj.innerHTML = current;
-      current++;
+      if (current > 5000) {
+        current = 5000;
+      }
+      obj.innerHTML = current + "+";
     }
-  }, 0.3);
+  }, 0);
 }
 
-animateValue("cout_up");
+function animateGodine(id) {
+  var obj = document.getElementById(id);
+  var current = parseInt(obj.innerHTML);
+
+  setInterval(function () {
+    if (current <= 10) {
+      current += 1;
+      // Update the contents of the element
+      if (current > 10) {
+        current = 10;
+      }
+      obj.innerHTML = current + "+";
+    }
+  }, 280);
+}
+
+var prolaznici = document.getElementById("cout_up");
+var godine = document.getElementById("cout_up_g");
+
+addEventListener("load", async function () {
+  if (getOffset(prolaznici).top < 540) {
+    animateProlaznike("cout_up");
+  }
+});
+addEventListener("scroll", async function () {
+  if (getOffset(prolaznici).top < 540) {
+    animateProlaznike("cout_up");
+  }
+});
+
+addEventListener("load", async function () {
+  if (getOffset(prolaznici).top < 540) {
+    animateGodine("cout_up_g");
+  }
+});
+addEventListener("scroll", async function () {
+  if (getOffset(prolaznici).top < 540) {
+    animateGodine("cout_up_g");
+  }
+});
