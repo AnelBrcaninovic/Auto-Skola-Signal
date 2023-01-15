@@ -1,10 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
-  background-color:#F1F6F5;
+  background-color: #f1f6f5;
 }
 
-main{
+main {
   margin-bottom: 220px;
 }
 
@@ -91,9 +91,7 @@ main{
   text-align: center;
 }
 
-.col {
+.col-card {
   border: 2px solid;
   margin: 2%;
 }
-
-
