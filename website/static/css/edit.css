@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
+  background-color:#F1F6F5;
 }
 
 main{
@@ -83,4 +84,10 @@ main{
   margin: auto;
   text-align: center;
 }
+
+.col {
+  border: 2px solid;
+  margin: 2%;
+}
+
 
