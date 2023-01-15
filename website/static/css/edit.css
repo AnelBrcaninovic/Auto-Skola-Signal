@@ -4,6 +4,11 @@ body {
 
   background-color: #f1f6f5;
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 main {
   margin-bottom: 220px;
@@ -106,7 +111,7 @@ main {
 }
 
 /* Taller footer on small screens */
-@media (max-width: 34em) {
+@media (max-width: 50em) {
   .footer {
     height: 500px;
   }
