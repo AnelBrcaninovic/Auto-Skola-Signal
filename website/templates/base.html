@@ -163,8 +163,10 @@
           }, 125);
         }
       }
-      nav.addEventListener("load", function () {
-        nav.classList.add("bg-dark", "shadow");
+      addEventListener("load", function () {
+        if (window.pageYOffset > 50) {
+          nav.classList.add("bg-dark", "shadow");
+        }
       });
     </script>
 
