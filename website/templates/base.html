@@ -21,9 +21,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Auto skola Signal</title>
+    <title>{% block title %} Auto skola Signal {% endblock %}</title>
 
     <!--Css za animaciju fade_in_from_left_to_right-->
+    {% block cssanimacije %}
+
     <style>
       .transform {
         transform: translateX(-200%);
@@ -63,6 +65,7 @@
         }
       }
     </style>
+    {% endblock %}
 
     <style>
       .banner-image {
@@ -76,10 +79,13 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    {% block editcss %}
     <link
       rel="stylesheet"
       href="{{url_for('static', filename='css/edit.css')}}"
     />
+
+    {% endblock %}
   </head>
   <body>
     <!--Navbar-->
@@ -131,6 +137,8 @@
       </div>
     </nav>
     <!--O nama-->
+    {% block content %}
+
     <div
       class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
       id="top"
@@ -152,6 +160,8 @@
         </div>
       </div>
     </div>
+    {% endblock %} {% block onama %}
+
     <div class="container my-5">
       <h1
         class="text-center mb-5 fade_from_left_to_right transform"
@@ -206,6 +216,7 @@
       </div>
     </div>
 
+    {% endblock %}
     <!--Footer-->
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="">
@@ -284,7 +295,7 @@
                   <a href="#!" class="text-white">Nas tim</a>
                 </p>
                 <p>
-                  <a href="#!" class="text-white">Kontakt</a>
+                  <a href="/kontakt" class="text-white">Kontakt</a>
                 </p>
               </div>
               <!-- Grid column -->
