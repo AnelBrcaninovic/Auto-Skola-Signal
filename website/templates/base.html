@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{% block title %} Auto skola Signal {% endblock %}</title>
+    <title>Auto skola Signal</title>
 
     <!--Css za animaciju fade_in_from_left_to_right-->
 
@@ -138,11 +138,8 @@
       id="top"
     >
       <div class="container translate">
-        {% block content %}
         <div id="translate" class="content text-center">
           <h1 class="text-white">Dobrodosli u auto školu Signal!</h1>
-
-          <h1 class="text-white">Dobrodosli u auto školu!</h1>
 
           <p class="text-grey fs-5 mb-3">
             Autoškola je online sustav koji vam pomaže da lakše pripremite svoje
@@ -154,11 +151,9 @@
               Kontakt
             </button>
           </a>
-          {% endblock %}
         </div>
       </div>
     </div>
-    {% block onama %}
 
     <div class="container my-5">
       <h1
@@ -185,6 +180,24 @@
       </p>
 
       <script type="text/javascript"></script>
+    </div>
+    <div
+      class=""
+      style="
+        background: rgb(28, 139, 226);
+        color: white;
+        margin: auto;
+        width: 100%;
+      "
+    >
+      <div class="row" style="padding-top: 2%; padding-bottom: 2%">
+        <div class="col p-5" align="center">
+          <h1 style="padding-top: 1%" style="font-size: xx-large">title</h1>
+          <p>Neki text</p>
+        </div>
+        <div class="col p-5" align="center" style="font-size: xx-large">2</div>
+        <div class="col p-5" align="center" style="font-size: xx-large">3</div>
+      </div>
     </div>
 
     <div class="container mb-5"></div>
@@ -214,139 +227,92 @@
       </div>
     </div>
 
-    {% endblock %}
     <!--Footer-->
     <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- Footer -->
+
     <div class="">
-      <!-- Footer -->
-      {% block footer %}
-
-      <footer
-        class="text-center text-lg-start text-white"
-        style="background-color: #1c2331"
-      >
-        <!-- Section: Social media -->
-        <section
-          class="d-flex justify-content-between p-4"
-          style="background-color: #4cacf4"
-        >
-          <!-- Left -->
-          <div class="me-5">
-            <span>Pratite nas na drustvenim mrezama:</span>
-          </div>
-          <!-- Left -->
-
-          <!-- Right -->
-          <div>
-            <a
-              href="https://www.facebook.com/search/top?q=auto%20%C5%A1kola%20%22signal%22%20%C5%BEivinice"
-              class="text-white me-4"
-            >
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/explore/locations/345039970/auto-skola-signal-zivinice/"
-              class="text-white me-4"
-            >
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a
-              href="https://github.com/AnelBrcaninovic/Auto-Skola-"
-              class="text-white me-4"
-            >
-              <i class="fa fa-github"></i>
-            </a>
-          </div>
-          <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-          <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold">Auto skola Signal</h6>
-                <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #2596be; height: 2px"
-                />
-                <p>
-                  Here you can use rows and columns to organize your footer
-                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.
-                </p>
+      <footer class="footer bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <h5><i class="fa fa-road"></i> ACME CO INC.</h5>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Benefits</a></li>
+                    <li><a href="">Partners</a></li>
+                    <li><a href="">Team</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Legal Terms</a></li>
+                    <li><a href="">About</a></li>
+                  </ul>
+                </div>
               </div>
-              <!-- Grid column -->
-
-              <!-- Grid column -->
-
-              <!-- Grid column -->
-
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold">Pomocni linkovi</h6>
-                <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #2596be; height: 2px"
-                />
-                <p>
-                  <a href="#top" class="text-white">Pocetna</a>
-                </p>
-                <p>
-                  <a href="#o_nama" class="text-white">O nama</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-white">Nas tim</a>
-                </p>
-                <p>
-                  <a href="/kontakt" class="text-white">Kontakt</a>
-                </p>
-              </div>
-              <!-- Grid column -->
-
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold">Kontakt</h6>
-                <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #2596be; height: 2px"
-                />
-                <p>
-                  <i class="fa fa-home mr-3"></i> Živinice, ul. Oslobođenja bb
-                </p>
-                <p><i class="fa fa-envelope mr-3"></i> signal@bussiness.com</p>
-                <p><i class="fa fa-phone mr-3"></i> 061/615-716</p>
-                <p><i class="fa fa-print mr-3"></i> 062/806-359</p>
-              </div>
-              <!-- Grid column -->
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="" class="nav-link pl-0"
+                    ><i class="fa fa-facebook fa-lg"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link"
+                    ><i class="fa fa-twitter fa-lg"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link"
+                    ><i class="fa fa-github fa-lg"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link"
+                    ><i class="fa fa-instagram fa-lg"></i
+                  ></a>
+                </li>
+              </ul>
+              <br />
             </div>
-            <!-- Grid row -->
+            <div class="col-md-2">
+              <h5 class="text-md-right">Contact Us</h5>
+              <hr />
+            </div>
+            <div class="col-md-5">
+              <form>
+                <fieldset class="form-group mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    placeholder="Enter email"
+                  />
+                </fieldset>
+                <fieldset class="form-group">
+                  <textarea
+                    class="form-control mb-3"
+                    id="exampleMessage"
+                    placeholder="Message"
+                  ></textarea>
+                </fieldset>
+                <fieldset class="form-group text-xs-right">
+                  <button type="button" class="btn btn-primary">Send</button>
+                </fieldset>
+              </form>
+            </div>
           </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div
-          class="text-center p-3"
-          style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-          © 2023 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/"
-            >autoskolasignal.ba</a
-          >
         </div>
-        <!-- Copyright -->
       </footer>
       <!-- Footer -->
     </div>
     <!-- End of .container -->
-    {% endblock %}
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
