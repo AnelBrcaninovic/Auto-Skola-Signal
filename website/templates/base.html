@@ -193,7 +193,7 @@
           <h1 id="cout_up_g" style="padding-top: 1%" style="font-size: 100px">
             0
           </h1>
-          <p>Neki text</p>
+          <p>Godina postojanja i rada!</p>
         </div>
 
         <div class="col p-5" align="center">
@@ -202,8 +202,8 @@
         </div>
 
         <div class="col p-5" align="center">
-          <h1 style="padding-top: 1%">title</h1>
-          <p>Neki text</p>
+          <h1 id="cout_up_p" style="padding-top: 1%">0</h1>
+          <p>Polaganja iz prvog pokusaja!</p>
         </div>
       </div>
     </div>
@@ -306,24 +306,43 @@
               <hr />
             </div>
             <div class="col-md-5">
-              <form>
+              <form method="POST" target="votar">
                 <fieldset class="form-group mb-3">
                   <input
                     type="email"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="clear"
+                    name="email"
                     placeholder="Unesite email"
                   />
                 </fieldset>
                 <fieldset class="form-group">
                   <textarea
                     class="form-control mb-3"
-                    id="exampleMessage"
+                    id="clear"
                     placeholder="Pitajte nas: "
+                    name="message"
                   ></textarea>
                 </fieldset>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %} {% for category,message in messages %} {% if
+                category=='error' %}
+                <label style="color: red" for="flash" class="form-label"
+                  >{{message}}</label
+                >
+                {% else %}
+                <label for="flash" class="form-label">{{message}}</label>
+
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
+
                 <fieldset class="form-group text-xs-right">
-                  <button type="button" class="btn btn-primary">Posalji</button>
+                  <button
+                    type="submit"
+                    onclick="clearform(document.querySelectorAll('#clear'))"
+                    class="btn btn-primary mb-2"
+                  >
+                    Posalji
+                  </button>
                 </fieldset>
               </form>
             </div>

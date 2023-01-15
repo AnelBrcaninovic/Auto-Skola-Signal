@@ -112,9 +112,9 @@ main {
 }
 
 /* Taller footer on small screens */
-@media (max-width: 50em) {
+@media (max-width: 80em) {
   .footer {
-    height: 500px;
+    height: fit-content;
   }
 }
 
@@ -155,5 +155,5 @@ footer .form-control {
 }
 
 .list-1:hover {
-    color: #93cbfb;
+  color: #93cbfb;
 }

@@ -1,13 +1,11 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, json, jsonify, flash
 
 views = Blueprint('views', __name__)
 
-@views.route('/')
+@views.route('/', methods=['POST', 'GET'])
 def homepage():
+
     return render_template('base.html')
 
 
-@views.route('/kontakt',methods=['GET', 'POST'])
-def kontakt():
-    return render_template('contact.html')
 

@@ -134,8 +134,25 @@ function animateGodine(id) {
   }, 280);
 }
 
+function animatePostotak(id) {
+  var obj = document.getElementById(id);
+  var current = parseInt(obj.innerHTML);
+
+  setInterval(function () {
+    if (current <= 100) {
+      current += 1;
+      // Update the contents of the element
+      if (current > 100) {
+        current = 100;
+      }
+      obj.innerHTML = current + "%";
+    }
+  }, 25);
+}
+
 var prolaznici = document.getElementById("cout_up");
 var godine = document.getElementById("cout_up_g");
+var postotak = document.getElementById("cout_up_p");
 
 addEventListener("load", async function () {
   if (getOffset(prolaznici).top < 540) {
@@ -156,5 +173,16 @@ addEventListener("load", async function () {
 addEventListener("scroll", async function () {
   if (getOffset(prolaznici).top < 540) {
     animateGodine("cout_up_g");
+  }
+});
+
+addEventListener("load", async function () {
+  if (getOffset(prolaznici).top < 540) {
+    animatePostotak("cout_up_p");
+  }
+});
+addEventListener("scroll", async function () {
+  if (getOffset(prolaznici).top < 540) {
+    animatePostotak("cout_up_p");
   }
 });
