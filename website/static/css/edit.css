@@ -153,3 +153,7 @@ footer .form-control {
   box-shadow: none;
   border: none;
 }
+
+.list-1:hover {
+    color: #93cbfb;
+}
