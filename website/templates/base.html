@@ -24,7 +24,6 @@
     <title>{% block title %} Auto skola Signal {% endblock %}</title>
 
     <!--Css za animaciju fade_in_from_left_to_right-->
-    {% block cssanimacije %}
 
     <style>
       .transform {
@@ -65,7 +64,6 @@
         }
       }
     </style>
-    {% endblock %}
 
     <style>
       .banner-image {
@@ -79,13 +77,10 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    {% block editcss %}
     <link
       rel="stylesheet"
       href="{{url_for('static', filename='css/edit.css')}}"
     />
-
-    {% endblock %}
   </head>
   <body>
     <!--Navbar-->
@@ -137,7 +132,6 @@
       </div>
     </nav>
     <!--O nama-->
-    {% block content %}
 
     <div
       class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
@@ -145,6 +139,8 @@
     >
       <div class="container translate">
         <div id="translate" class="content text-center">
+          {% block content %}
+
           <h1 class="text-white">Dobrodosli u auto školu!</h1>
 
           <p class="text-grey fs-5 mb-3">
@@ -157,10 +153,11 @@
               Kontakt
             </button>
           </a>
+          {% endblock %}
         </div>
       </div>
     </div>
-    {% endblock %} {% block onama %}
+    {% block onama %}
 
     <div class="container my-5">
       <h1
@@ -216,7 +213,6 @@
       </div>
     </div>
 
-    {% endblock %}
     <!--Footer-->
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="">
@@ -337,6 +333,7 @@
       <!-- Footer -->
     </div>
     <!-- End of .container -->
+    {% endblock %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
