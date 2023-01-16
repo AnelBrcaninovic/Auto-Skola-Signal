@@ -139,11 +139,11 @@ function animatePostotak(id) {
   var current = parseInt(obj.innerHTML);
 
   setInterval(function () {
-    if (current <= 100) {
+    if (current <= 89) {
       current += 1;
       // Update the contents of the element
-      if (current > 100) {
-        current = 100;
+      if (current > 89) {
+        current = 89;
       }
       obj.innerHTML = current + "%";
     }
