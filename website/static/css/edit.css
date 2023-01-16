@@ -2,6 +2,7 @@ body {
   font-family: "Montserrat", sans-serif;
   position: relative;
   background-color: #f1f6f5;
+  box-sizing:border-box ;
 }
 
 main {
@@ -119,6 +120,7 @@ footer {
   padding-top: 30px;
   background-color: #292c2f;
   color: #bbb;
+  box-sizing: content-box;
 }
 
 footer a {
