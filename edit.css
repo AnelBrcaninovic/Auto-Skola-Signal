@@ -147,12 +147,4 @@ footer .form-control {
   padding: 0.7em 1em;
 }
 
-.form-control:focus {
-  background: #1f2022;
-  box-shadow: none;
-  border: none;
-}
 
-.list-1:hover {
-  color: #93cbfb;
-}
